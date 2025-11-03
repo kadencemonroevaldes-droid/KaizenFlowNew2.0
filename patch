@@ -1,0 +1,639 @@
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/app/static/css/style.css b/app/static/css/style.css
+index 6299701d38251ca7e0f39c2903fc09f886b9b5a3..36ff0326025c918d6f2f5c1659b52cec319373a7 100644
+--- a/app/static/css/style.css
++++ b/app/static/css/style.css
+@@ -1,35 +1,595 @@
+-body{
+-  margin:0;
+-  font-family:'Inter',sans-serif;
+-  background:linear-gradient(120deg,#f4f6f9 0%,#dce3f9 50%,#fce4ec 100%);
+-  color:#222;
+-}
+-.nav{
+-  background:#0057b7;color:white;padding:1rem 2rem;
+-  display:flex;justify-content:space-between;align-items:center;
+-  box-shadow:0 4px 10px rgba(0,0,0,0.1);
+-}
+-.nav a{color:white;text-decoration:none;margin-left:1rem;font-weight:600;}
+-.nav a.active{text-decoration:underline;}
+-.metrics{
+-  display:flex;justify-content:center;gap:1rem;margin:2rem;flex-wrap:wrap;
+-}
+-.card{
+-  background:rgba(255,255,255,0.8);
+-  backdrop-filter:blur(10px);
+-  border-radius:18px;
+-  box-shadow:0 6px 20px rgba(0,0,0,0.15);
+-  padding:1.5rem 2rem;text-align:center;
+-  transition:transform .3s;
+-}
+-.card:hover{transform:translateY(-6px);}
+-.form-section{max-width:500px;margin:2rem auto;text-align:center;}
+-input,select,button{
+-  width:90%;margin:.4rem 0;padding:.6rem;border-radius:10px;
+-  border:1px solid #ccc;font-size:1rem;
+-}
+-button{background:#0057b7;color:white;border:none;font-weight:600;cursor:pointer;}
+-button:hover{background:#0072ff;}
+-table{width:80%;margin:2rem auto;border-collapse:collapse;}
+-th,td{padding:.7rem;border-bottom:1px solid #ccc;text-align:left;}
+-.note{color:#555;font-style:italic;text-align:center;margin-top:1rem;}
++:root {
++  --bg-primary: #f5f7fb;
++  --bg-secondary: #0b1f51;
++  --surface: rgba(255, 255, 255, 0.82);
++  --surface-strong: #ffffff;
++  --accent: #2563eb;
++  --accent-soft: rgba(37, 99, 235, 0.12);
++  --accent-dark: #1e3a8a;
++  --success: #16a34a;
++  --warning: #f97316;
++  --muted: #6b7280;
++  --border: rgba(15, 23, 42, 0.12);
++  --radius-lg: 22px;
++  --radius-md: 16px;
++  --radius-sm: 10px;
++  --shadow-soft: 0 15px 45px rgba(15, 23, 42, 0.08);
++  --shadow-hard: 0 25px 60px rgba(15, 23, 42, 0.14);
++}
++
++* {
++  box-sizing: border-box;
++}
++
++body {
++  margin: 0;
++  font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
++  background: radial-gradient(circle at 10% 20%, rgba(37, 99, 235, 0.12), transparent 55%),
++              radial-gradient(circle at 90% -10%, rgba(99, 102, 241, 0.18), transparent 45%),
++              var(--bg-primary);
++  color: #0f172a;
++  min-height: 100vh;
++  display: flex;
++  flex-direction: column;
++}
++
++main {
++  flex: 1;
++}
++
++.nav {
++  position: sticky;
++  top: 0;
++  backdrop-filter: blur(18px);
++  background: rgba(245, 247, 251, 0.92);
++  border-bottom: 1px solid rgba(148, 163, 184, 0.24);
++  z-index: 10;
++}
++
++.nav__inner {
++  max-width: 1100px;
++  margin: 0 auto;
++  padding: 1rem 1.5rem;
++  display: flex;
++  align-items: center;
++  justify-content: space-between;
++  gap: 1rem;
++}
++
++.logo {
++  font-weight: 700;
++  font-size: 1.1rem;
++  display: flex;
++  align-items: center;
++  gap: 0.5rem;
++  color: var(--accent-dark);
++}
++
++.links {
++  display: flex;
++  align-items: center;
++  gap: 1rem;
++}
++
++.links a {
++  color: var(--muted);
++  text-decoration: none;
++  font-weight: 600;
++  padding: 0.35rem 0.85rem;
++  border-radius: 999px;
++  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
++}
++
++.links a:hover {
++  color: var(--accent-dark);
++  transform: translateY(-1px);
++  background: rgba(37, 99, 235, 0.12);
++}
++
++.links a.active {
++  color: #ffffff;
++  background: var(--accent);
++  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.25);
++}
++
++.container {
++  max-width: 1100px;
++  margin: 0 auto;
++  padding: 0 1.5rem 3rem;
++}
++
++.hero {
++  position: relative;
++  padding: 4.5rem 0 3rem;
++}
++
++.hero::after {
++  content: "";
++  position: absolute;
++  inset: 0 0 auto;
++  height: 420px;
++  background: linear-gradient(135deg, rgba(37, 99, 235, 0.18), rgba(14, 116, 144, 0.12));
++  border-radius: 0 0 48px 48px;
++  z-index: -1;
++}
++
++.hero__content {
++  display: grid;
++  gap: 1.75rem;
++  max-width: 680px;
++}
++
++.hero .tag {
++  align-self: start;
++}
++
++.tag {
++  display: inline-flex;
++  align-items: center;
++  gap: 0.35rem;
++  padding: 0.4rem 0.9rem;
++  border-radius: 999px;
++  background: rgba(15, 23, 42, 0.08);
++  color: var(--accent-dark);
++  font-size: 0.85rem;
++  font-weight: 600;
++  letter-spacing: 0.03em;
++  text-transform: uppercase;
++}
++
++.hero h1 {
++  font-size: clamp(2.4rem, 4vw, 3.4rem);
++  margin: 0;
++  line-height: 1.05;
++  color: #0f172a;
++}
++
++.hero p {
++  max-width: 520px;
++  font-size: 1.05rem;
++  line-height: 1.6;
++  color: rgba(15, 23, 42, 0.72);
++}
++
++.hero__actions {
++  display: flex;
++  flex-wrap: wrap;
++  gap: 0.8rem;
++}
++
++.btn {
++  display: inline-flex;
++  align-items: center;
++  justify-content: center;
++  gap: 0.5rem;
++  padding: 0.65rem 1.4rem;
++  border-radius: 999px;
++  font-weight: 600;
++  text-decoration: none;
++  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
++  cursor: pointer;
++}
++
++.btn.primary {
++  background: linear-gradient(120deg, var(--accent), #60a5fa);
++  color: #ffffff;
++  box-shadow: 0 18px 35px rgba(37, 99, 235, 0.35);
++  border: none;
++}
++
++.btn.primary:hover {
++  transform: translateY(-2px);
++  box-shadow: 0 22px 44px rgba(37, 99, 235, 0.42);
++}
++
++.btn.ghost {
++  color: var(--accent-dark);
++  background: transparent;
++  border: 1px solid rgba(37, 99, 235, 0.35);
++}
++
++.btn.ghost:hover {
++  background: rgba(37, 99, 235, 0.08);
++}
++
++.hero__meta {
++  display: grid;
++  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
++  gap: 1rem;
++}
++
++.hero__stat {
++  background: rgba(255, 255, 255, 0.82);
++  border-radius: var(--radius-md);
++  padding: 0.9rem 1.1rem;
++  box-shadow: var(--shadow-soft);
++  display: grid;
++  gap: 0.2rem;
++}
++
++.hero__stat span {
++  font-size: 0.8rem;
++  color: var(--muted);
++}
++
++.hero__stat strong {
++  font-size: 1.5rem;
++}
++
++.metric-grid {
++  display: grid;
++  gap: 1rem;
++  margin-top: 2rem;
++  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
++}
++
++.card {
++  background: var(--surface);
++  border-radius: var(--radius-lg);
++  padding: 1.4rem 1.6rem;
++  box-shadow: var(--shadow-soft);
++  display: grid;
++  gap: 0.45rem;
++  transition: transform 0.35s ease, box-shadow 0.35s ease;
++}
++
++.card:hover {
++  transform: translateY(-4px);
++  box-shadow: var(--shadow-hard);
++}
++
++.card h2 {
++  margin: 0;
++  font-size: 2rem;
++  color: var(--accent-dark);
++}
++
++.card p {
++  margin: 0;
++  color: var(--muted);
++}
++
++.panel-grid {
++  display: grid;
++  gap: 1.4rem;
++  margin-top: 2.5rem;
++  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
++}
++
++.panel {
++  background: var(--surface-strong);
++  border-radius: var(--radius-lg);
++  padding: 1.8rem;
++  box-shadow: var(--shadow-soft);
++  position: relative;
++  overflow: hidden;
++  display: grid;
++  gap: 1.2rem;
++}
++
++.panel h3 {
++  margin: 0;
++  font-size: 1.2rem;
++  color: #0f172a;
++}
++
++.panel small {
++  color: var(--muted);
++}
++
++.timeline {
++  list-style: none;
++  margin: 0;
++  padding: 0;
++  display: grid;
++  gap: 1rem;
++}
++
++.timeline li {
++  position: relative;
++  padding-left: 1.8rem;
++}
++
++.timeline li::before {
++  content: "";
++  position: absolute;
++  left: 0.6rem;
++  top: 0.4rem;
++  width: 0.6rem;
++  height: 0.6rem;
++  background: var(--accent);
++  border-radius: 50%;
++  box-shadow: 0 0 0 6px rgba(37, 99, 235, 0.12);
++}
++
++.timeline time {
++  font-size: 0.8rem;
++  color: var(--muted);
++  text-transform: uppercase;
++  letter-spacing: 0.08em;
++}
++
++.timeline strong {
++  display: block;
++  margin-top: 0.35rem;
++  color: #0f172a;
++}
++
++.timeline span {
++  color: var(--muted);
++  font-size: 0.95rem;
++}
++
++.muted {
++  color: var(--muted);
++  font-size: 0.9rem;
++}
++
++.panel.highlight::after {
++  content: "";
++  position: absolute;
++  inset: auto -20% -20% auto;
++  width: 220px;
++  height: 220px;
++  background: radial-gradient(circle, rgba(59, 130, 246, 0.4), transparent 65%);
++  opacity: 0.5;
++  pointer-events: none;
++}
++
++#chart {
++  width: 100%;
++  min-height: 280px;
++}
++
++.impact-section {
++  margin-top: 3rem;
++  display: grid;
++  gap: 1.2rem;
++}
++
++.impact-section > p {
++  margin: 0;
++  color: var(--muted);
++  max-width: 640px;
++}
++
++.sdg-grid {
++  display: grid;
++  gap: 1rem;
++  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
++}
++
++.sdg-card {
++  background: rgba(255, 255, 255, 0.85);
++  border-radius: var(--radius-md);
++  padding: 1.4rem 1.6rem;
++  box-shadow: var(--shadow-soft);
++  display: grid;
++  gap: 0.65rem;
++  border: 1px solid rgba(37, 99, 235, 0.08);
++  transition: transform 0.3s ease;
++}
++
++.sdg-card:hover {
++  transform: translateY(-4px);
++}
++
++.sdg-badge {
++  font-weight: 700;
++  font-size: 0.75rem;
++  letter-spacing: 0.08em;
++  color: var(--accent-dark);
++  text-transform: uppercase;
++  display: inline-flex;
++  align-items: center;
++  gap: 0.35rem;
++}
++
++.sdg-count {
++  font-weight: 600;
++  color: var(--accent-dark);
++}
++
++.layout-split {
++  display: grid;
++  gap: 1.4rem;
++  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
++  margin-top: 2.2rem;
++}
++
++.form-card {
++  background: var(--surface-strong);
++  border-radius: var(--radius-lg);
++  padding: 1.8rem;
++  box-shadow: var(--shadow-soft);
++  display: grid;
++  gap: 1rem;
++}
++
++.form-card h2 {
++  margin: 0;
++}
++
++.form-grid {
++  display: grid;
++  gap: 0.9rem;
++}
++
++input, select, textarea {
++  width: 100%;
++  padding: 0.75rem 0.95rem;
++  border-radius: var(--radius-sm);
++  border: 1px solid var(--border);
++  font-size: 1rem;
++  font-family: inherit;
++  background: rgba(255, 255, 255, 0.9);
++  transition: border 0.2s ease, box-shadow 0.2s ease;
++}
++
++input:focus, select:focus, textarea:focus {
++  outline: none;
++  border-color: rgba(37, 99, 235, 0.6);
++  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
++}
++
++button {
++  border: none;
++  font-family: inherit;
++}
++
++button[type="submit"],
++.form-card button {
++  border-radius: 999px;
++  padding: 0.75rem 1.4rem;
++  font-weight: 600;
++  background: linear-gradient(135deg, var(--accent), #38bdf8);
++  color: #ffffff;
++  cursor: pointer;
++  box-shadow: 0 18px 40px rgba(37, 99, 235, 0.32);
++  transition: transform 0.3s ease, box-shadow 0.3s ease;
++}
++
++button[type="submit"]:hover,
++.form-card button:hover {
++  transform: translateY(-2px);
++  box-shadow: 0 22px 46px rgba(37, 99, 235, 0.38);
++}
++
++.table-card {
++  background: var(--surface-strong);
++  border-radius: var(--radius-lg);
++  padding: 1.4rem 1.6rem;
++  box-shadow: var(--shadow-soft);
++  overflow-x: auto;
++}
++
++.panel-header {
++  display: flex;
++  flex-direction: column;
++  gap: 0.4rem;
++  margin-bottom: 1rem;
++}
++
++.panel-header h2 {
++  margin: 0;
++}
++
++.table-card h2 {
++  margin-top: 0;
++}
++
++table {
++  width: 100%;
++  border-collapse: collapse;
++  min-width: 520px;
++}
++
++th, td {
++  padding: 0.85rem 1rem;
++  text-align: left;
++  border-bottom: 1px solid rgba(148, 163, 184, 0.18);
++  font-size: 0.95rem;
++}
++
++th {
++  text-transform: uppercase;
++  letter-spacing: 0.08em;
++  font-size: 0.75rem;
++  color: var(--muted);
++}
++
++tbody tr:hover {
++  background: rgba(37, 99, 235, 0.05);
++}
++
++.badge {
++  display: inline-flex;
++  align-items: center;
++  padding: 0.35rem 0.7rem;
++  border-radius: 999px;
++  font-size: 0.75rem;
++  font-weight: 600;
++  background: rgba(37, 99, 235, 0.12);
++  color: var(--accent-dark);
++}
++
++.badge.success {
++  background: rgba(22, 163, 74, 0.16);
++  color: #14532d;
++}
++
++.badge.warning {
++  background: rgba(249, 115, 22, 0.16);
++  color: #9a3412;
++}
++
++.empty-state {
++  padding: 1.2rem 1.4rem;
++  background: rgba(148, 163, 184, 0.12);
++  border-radius: var(--radius-md);
++  color: var(--muted);
++  text-align: center;
++}
++
++.culture-card {
++  max-width: 680px;
++  margin: 4rem auto;
++  padding: 2.6rem;
++  border-radius: 32px;
++  background: linear-gradient(135deg, rgba(37, 99, 235, 0.82), rgba(56, 189, 248, 0.82));
++  color: #ffffff;
++  box-shadow: 0 30px 60px rgba(15, 23, 42, 0.25);
++  text-align: center;
++  display: grid;
++  gap: 1rem;
++}
++
++.culture-card h2 {
++  margin: 0;
++  font-size: 2rem;
++}
++
++.culture-card p {
++  margin: 0;
++  line-height: 1.6;
++}
++
++.culture-card .note {
++  font-style: italic;
++  color: rgba(255, 255, 255, 0.85);
++}
++
++footer {
++  margin-top: auto;
++  padding: 2rem 0 3rem;
++  text-align: center;
++  color: var(--muted);
++  font-size: 0.85rem;
++}
++
++@media (max-width: 768px) {
++  .nav__inner {
++    flex-direction: column;
++    align-items: flex-start;
++  }
++
++  .links {
++    width: 100%;
++    flex-wrap: wrap;
++  }
++
++  .hero::after {
++    height: 360px;
++  }
++
++  table {
++    min-width: 100%;
++  }
++}
++
++@media (prefers-reduced-motion: reduce) {
++  *, *::before, *::after {
++    transition-duration: 0.01ms !important;
++    animation-duration: 0.01ms !important;
++  }
++}
+ 
+EOF
+)
