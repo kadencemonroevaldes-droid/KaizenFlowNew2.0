@@ -1,0 +1,194 @@
+diff --git a/app/main.py b/app/main.py
+index 1aed8ebc5532805427d831d2f161ffcdf0659603..754a22c2241b5687a47cc85dea32b644690da110 100644
+--- a/app/main.py
++++ b/app/main.py
+@@ -1,67 +1,166 @@
+-from fastapi import FastAPI, Request, Form
++from datetime import date
++import random
++import pandas as pd
++from fastapi import FastAPI, Form, Request
+ from fastapi.responses import HTMLResponse, RedirectResponse
+ from fastapi.staticfiles import StaticFiles
+ from fastapi.templating import Jinja2Templates
+-from sqlalchemy import create_engine, Column, Integer, String, Float, Date
+-from sqlalchemy.orm import sessionmaker, declarative_base
+-from datetime import date
+-import pandas as pd, random
++from sqlalchemy import Column, Date, Float, Integer, String, create_engine
++from sqlalchemy.orm import declarative_base, sessionmaker
+ 
+ app = FastAPI(title="Kaizen Flow Platform")
+ app.mount("/static", StaticFiles(directory="app/static"), name="static")
+ templates = Jinja2Templates(directory="app/templates")
+ 
+ # ---- Database ----
+-engine = create_engine("sqlite:///app/db/kaizen.db", connect_args={"check_same_thread": False})
++engine = create_engine(
++    "sqlite:///app/db/kaizen.db", connect_args={"check_same_thread": False}
++)
+ Base = declarative_base()
+ SessionLocal = sessionmaker(bind=engine)
+ session = SessionLocal()
+ 
++
+ class Idea(Base):
+     __tablename__ = "ideas"
++
+     id = Column(Integer, primary_key=True)
+     title = Column(String)
+     goal = Column(String)
+     sdg = Column(String)
+     progress = Column(Float)
+     date_logged = Column(Date)
+ 
++
+ Base.metadata.create_all(bind=engine)
+ 
++
+ def get_summary():
+-    ideas = session.query(Idea).all()
+-    df = pd.DataFrame([{"progress": i.progress, "sdg": i.sdg} for i in ideas]) if ideas else pd.DataFrame(columns=["progress","sdg"])
+-    avg = round(df["progress"].mean(),1) if not df.empty else 0
++    ideas = (
++        session.query(Idea)
++        .order_by(Idea.date_logged.desc(), Idea.id.desc())
++        .all()
++    )
++    records = [
++        {
++            "progress": idea.progress,
++            "sdg": idea.sdg,
++            "date": (idea.date_logged or date.today()).isoformat(),
++        }
++        for idea in ideas
++    ]
++    df = (
++        pd.DataFrame(records, columns=["progress", "sdg", "date"])
++        if records
++        else pd.DataFrame(columns=["progress", "sdg", "date"])
++    )
++
++    if df.empty:
++        return ideas, 0, {}, None, 0, 0, []
++
++    avg_progress = round(float(df["progress"].mean()), 1)
+     sdg_count = df["sdg"].value_counts().to_dict()
+-    return ideas, avg, sdg_count
++    top_sdg = max(sdg_count, key=sdg_count.get) if sdg_count else None
++    completion_rate = round(float((df["progress"] >= 75).mean() * 100), 1)
++    momentum = round(
++        float(df["progress"].tail(min(5, len(df))).mean()),
++        1,
++    )
++    timeline = (
++        df.groupby("date").size().reset_index(name="count").to_dict("records")
++    )
++
++    return ideas, avg_progress, sdg_count, top_sdg, completion_rate, momentum, timeline
++
+ 
+ # --- Dashboard ---
+ @app.get("/", response_class=HTMLResponse)
+ def dashboard(request: Request):
+-    ideas, avg, sdg_count = get_summary()
+-    return templates.TemplateResponse("dashboard.html", {"request":request, "ideas":ideas, "avg":avg, "sdg_count":sdg_count})
++    (
++        ideas,
++        avg,
++        sdg_count,
++        top_sdg,
++        completion_rate,
++        momentum,
++        timeline,
++    ) = get_summary()
++    recent_ideas = ideas[:4]
++    return templates.TemplateResponse(
++        "dashboard.html",
++        {
++            "request": request,
++            "ideas": ideas,
++            "avg": avg,
++            "sdg_count": sdg_count,
++            "top_sdg": top_sdg,
++            "completion_rate": completion_rate,
++            "momentum": momentum,
++            "timeline": timeline,
++            "recent_ideas": recent_ideas,
++            "active_page": "dashboard",
++        },
++    )
++
+ 
+ # --- Tracker ---
+ @app.get("/tracker", response_class=HTMLResponse)
+ def tracker(request: Request):
+-    ideas, avg, sdg_count = get_summary()
+-    return templates.TemplateResponse("tracker.html", {"request":request, "ideas":ideas, "avg":avg})
++    (
++        ideas,
++        avg,
++        sdg_count,
++        top_sdg,
++        completion_rate,
++        momentum,
++        timeline,
++    ) = get_summary()
++    return templates.TemplateResponse(
++        "tracker.html",
++        {
++            "request": request,
++            "ideas": ideas,
++            "avg": avg,
++            "sdg_count": sdg_count,
++            "top_sdg": top_sdg,
++            "completion_rate": completion_rate,
++            "momentum": momentum,
++            "timeline": timeline,
++            "active_page": "tracker",
++        },
++    )
++
+ 
+ @app.post("/add", response_class=RedirectResponse)
+ def add(title: str = Form(...), goal: str = Form(...), sdg: str = Form(...)):
+-    new = Idea(title=title, goal=goal, sdg=sdg,
+-               progress=random.randint(30,100), date_logged=date.today())
++    new = Idea(
++        title=title,
++        goal=goal,
++        sdg=sdg,
++        progress=random.randint(30, 100),
++        date_logged=date.today(),
++    )
+     session.add(new)
+     session.commit()
+     return RedirectResponse("/tracker", status_code=303)
+ 
++
+ # --- Culture Lens ---
+ @app.get("/culture", response_class=HTMLResponse)
+ def culture(request: Request):
+-    c = random.choice([
+-        ("Collectivist","Team harmony and shared accountability."),
+-        ("Individualist","Personal ownership and initiative."),
+-        ("High-Context","Meaning via tone and relationships."),
+-        ("Low-Context","Direct, explicit communication.")
+-    ])
+-    return templates.TemplateResponse("culture.html", {"request":request, "culture":c})
++    culture_insight = random.choice(
++        [
++            ("Collectivist", "Team harmony and shared accountability."),
++            ("Individualist", "Personal ownership and initiative."),
++            ("High-Context", "Meaning via tone and relationships."),
++            ("Low-Context", "Direct, explicit communication."),
++        ]
++    )
++    return templates.TemplateResponse(
++        "culture.html",
++        {
++            "request": request,
++            "culture": culture_insight,
++            "active_page": "culture",
++        },
++    )
