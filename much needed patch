@@ -1,0 +1,1394 @@
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/app/__pycache__/main.cpython-312.pyc b/app/__pycache__/main.cpython-312.pyc
+deleted file mode 100644
+index faef69b24a7454314ac2240c77cc4a438ccf4858..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+HcmV?d00001
+
+literal 4696
+zcmb^!TWl29_0D78yY~9IHU_-J*swrsVp<9`jRH0f80@BCLNX0mjrU%!XPJk&GYhfn
+zZPyYKL_}gyT7{}eb*oAZ!XIg+DyiD4ME&f~T5HL8M1-p5hd&4SX})^y%+7k_l6>__
+zbMHC#o^v1PJ^zfw!U)<|@u2bxfd0)8uLY~X)1UJQeTXo^oQgC~;xu03H9-<MHpi=?
+z=97GyU-CP+pa!&{6m(!w4QXL1?7%)XqD7^s7L#IHgVdlkN{w1vifc_$le6wuo3$3H
+zMQfE>9Xz16Y3)+G0|(WF)B$G&)lR9CM})(nrSLt@y`Qv&Y{`AkyY$A0BS0C%(WRJ2
+zi5r$0?+GpihhQ~~;~T5eR+x$6Cftl$6mF^Y9=w`0X&cP9-g6NoZ3nD{Y+Gvcc9pte
+zrn|PD<k4#gw_im#LAHCRNju2)+;DY^x*_*k9a07B_lDPZTt(7Oc;Tu4rNo`Yx3tB(
+zC+;Hr6py!F6>E3t`v$&k&*9r%$F~dke)OF4x`}_|Jb1N$lb#g54Vx114wAwzz}G`k
+zQ+~Yjs;_p(J>PK0-sjx0ukMa}XM?F-kJ%+tf*lx<P3!3EC+)x)aw$(t%N9ors-<{4
+zdSYVi^ciB#7`jR9_!)u~N-~x=lj7{iSxdH*%!r~A6VS#{MbF8D6GWR)WecYKb}T~)
+zfN7#<6`k1rAw$h;x*a&FTO>=U?LTW#MbFy45!I04=wTpcN1Mbn6+_qLi$D~|B%{g{
+zj=D_Jld?(RED;0c_+0BLS(zhx64<XKUx!nt*xfnXXDOCS<^ltzbHll?JTp^;VKwBw
+z#Gtdb-z8u>>as@WVvNx8UNE=Cyre1?IWjOXz!vc2z(wc4emrS6Wu{5yV%h|@v^5Ry
+z#3QgxG-K#Gh$$`8EE9@2spvRUZxLb@d1?XhAtFfPFp_x8NdlOHNPL)I5<JtC{LWm!
+zGZrbh2@h?;!ww#)(MKJ;=EzdRteEoI;z>+o+owQpPQWcAGgQ%JI-9;oX2(;Fb}*f0
+z;z+0Ma5}9SIIl7|noeKJ%W8EcmQGvpq)J?rM&LCx3Z2a>n8p~^!Z0yw$f_-vI7=HC
+z9-N^@mV$n1BSRxhk!jV)W(mHFp28IR>fpdRlTZ_6jftKinxRvJ3=9+VqGiksxGHBF
+zA17BFwP>=U_s`7IE?{=LRshUbp}UG6w00H8)<TV?z~aP8XixFjTC}-z@Wy!Y_*$f?
+z)OX{R;_zBHUTVM5UmRL%Y%7r)h2n{|=8oH~AM9H=MR$8!eociezO!if^mh<RKSWHC
+zZp&3;q=&Q7@)V9drQ`zj>n`khbpg#Idc+EO6gel$c$hoRqhWND%kWv0;V;0W3*0=H
+zW1`>GV3vt|Q^VXH{uclKHW9cBoOdTZ@$F|~9t&B1N%ZIo{5+qFZ`vAAbDPD~?zDLx
+z^PK?Y+Nu+EgZEzS^Gsdmu)iPxkKphm>WHhL$CG0Oo0_*)5a-dnFfUFCXW@OE^TsPE
+z6&O$Pv=?~jPS({Ru>C;B2}<T;mK7;WU8$HIs74^$2SJg#rezDVs@nVvwnGr7<Pi!U
+zvayrxgQ#K6+CFOJb!>|ok##$ISyuBToq;LKv;&rr#!ALY`RG<S#^w~8$5XKF<*Xe7
+z2dUEeU@gfSO);uSmRM;suQC6m--nrQ_{={+S40n^EjP#B8@sc!6761%_AEzxD$!mr
+z?K9`!Z@#(py{(_+EA3;S<?ruUJo@|5-;92I>682)@|DC7?&p`=$5uk)D;LtM7nJ1-
+zO4%%|BlI(Fn1{jSj`PnDdWRd~i^m@9AN(Zv$Kd<DCBAgzR>Nw%XF1+eiT5tbE8*Rr
+z%Eh4v@#fNZZ-rLlearE_N__WfeE)KMe<eOxJoz9JFZGmW%aLSRO#bId042sblRfWm
+z$)Q-#<_19g4G;^Q6qAM^Z-S7hn};&hA_b@ssyW;QAmDJdHBaqtgX0yr0$&iUYViSP
+z$4=VRFbC$r&GYjD=I@A}>79j4I6l{aWpjGckSXq;wlwvwNM8YNM^*GNgN{IVS8#M-
+zhiXZ}j(Zu;OO5nZAT*iVZ)h=8+nf%=!Y)R!AG#v?V(YG7jV+6v#pBlxltK?9t*epV
+z<w$S2@8JFKl_%aR%eYK`vV3U15-F6$f)kOx3JzFQ&Ombfnv_^ral+CW0RA6R0vXjZ
+zkt?HU^;}0nDPgmOj>5sudwrnFMp@PNB7EjP=)Upoi~9XU`ONupdUE+-rV_zr5j*dm
+z69;6B`<=u>d)Qe!q07_<T^2YU8Q1{S%fQvURin*`K(MJ{4)dN(ShXOX^UC=;YR~Q<
+zQ&+7FEUy--b1eOBYV(2@IyqEF$&%ov=Isr1P2Lg~v2V%m-3@dR7=OGS79V5iAfB+8
+zyCD%bD)q6s<IpJs;4du8vtlQ2LYToM6>>7A?WeMi4Gr85Mn$)1GcZ8?WMFxgGEG5v
+z!r1m_3{6uk%7l^<HyvjSI=S+7d#67HLZ=%9z&s5dXgl0cI=9&R(Se5@+kf5g%Z5ez
+zQBS3#|F6S;AN}*_Urs+0xX3719Qs0xTsyUJswAw4tq%bnUl?alr0e$R$3rWTLuK)h
+zYYoAHOkTC}P?gr=0i5H9&#{0>0O~CuSBng=P;FWGHT!KX2^P4GWc|D(jd^B8Sh!QO
+z63~P=o)THj3bm~Yg`aX+F|D~>6GYaM(=vtPWi|<-O`3oZoRl+8GLR<~C@g3DfiZRx
+z1b<n<P+2j~7hZ?b$IxXpX<X3(oK|KWennR-#i@aTX)by~$xgpGWI!GLt~J*)2FV8M
+z=;UQZPFjXe91cpLAciWMZDBH|$Z6wBji-CqDd+bk$-6VEl2NQAQ*mBbG7eM!T(l}&
+z*VTE))gf8B5(gV#It9C!Hk1sZ#{i*2&_SAIQPbu!CKGoxiP3XxopmgMd4Vt3a5MH^
+z><RKE{7;cD6eu2j7DdrEH~u*>VB*~J!8a<A^JVe8qw>@~J1_-5Eb@#(nT{!QV#++w
+zZmQ1rd-=qq%n}@nwOhPJx7?p%e=L-_wcYHkRO2~Fk+K+KhoSVBRjBc`S;`!Hqri2G
+zTUJ@QC2Ye6Wk39W&^TLRo@)nLace11COBT@p8-RVP0HfFD?S1KDr}#|$^%D)w!iwP
+zBp!qR96Nf}{SP{AWMtLxM%QVB8nI;9Teid1A1tU$+`J?}wcunJC)C>Fi~+xNf@x9L
+zBON{LV(0H>ol{^0Uv?|}S7;9Am@Ao=pkEg_j(ddmETcV-(955ry`Q80M`&~vjXpw$
+zKS!O9P}jfwv2yF4760C%@Bj(dLJOhmsarq(=;f8RL!Z7|46UFOYtgPnV<md982ZwW
+z!ijR?KzZnm@|zdR$KF{9rHlTxK%x@pEQ)K5U5o82jk}A{wJ@v21JA?&*M0pv&kzjj
+z&4}||i!H=fQO7dsxII-y9V@8!iRj~Ytj7`WyOvl;TyMGkb}>=m_N?<f_fxKP<q2Zr
+zQvvaN-Kq7kN4jP4G$Vb9%@eM4o{<uVbkLnz4>Hn@g^ufe<sB~-J1X4ZT3hGso)6x-
+zJN$9Wy_28qyl?&^^(FFghp(IKY*@@V!>2=F&fH;k>Vb70ppE-&92(%>bPi=Bqa6H_
+JXP~2!{{k<1J5vAv
+
+diff --git a/app/main.py b/app/main.py
+index 1aed8ebc5532805427d831d2f161ffcdf0659603..754a22c2241b5687a47cc85dea32b644690da110 100644
+--- a/app/main.py
++++ b/app/main.py
+@@ -1,67 +1,166 @@
+-from fastapi import FastAPI, Request, Form
++from datetime import date
++import random
++import pandas as pd
++from fastapi import FastAPI, Form, Request
+ from fastapi.responses import HTMLResponse, RedirectResponse
+ from fastapi.staticfiles import StaticFiles
+ from fastapi.templating import Jinja2Templates
+-from sqlalchemy import create_engine, Column, Integer, String, Float, Date
+-from sqlalchemy.orm import sessionmaker, declarative_base
+-from datetime import date
+-import pandas as pd, random
++from sqlalchemy import Column, Date, Float, Integer, String, create_engine
++from sqlalchemy.orm import declarative_base, sessionmaker
+ 
+ app = FastAPI(title="Kaizen Flow Platform")
+ app.mount("/static", StaticFiles(directory="app/static"), name="static")
+ templates = Jinja2Templates(directory="app/templates")
+ 
+ # ---- Database ----
+-engine = create_engine("sqlite:///app/db/kaizen.db", connect_args={"check_same_thread": False})
++engine = create_engine(
++    "sqlite:///app/db/kaizen.db", connect_args={"check_same_thread": False}
++)
+ Base = declarative_base()
+ SessionLocal = sessionmaker(bind=engine)
+ session = SessionLocal()
+ 
++
+ class Idea(Base):
+     __tablename__ = "ideas"
++
+     id = Column(Integer, primary_key=True)
+     title = Column(String)
+     goal = Column(String)
+     sdg = Column(String)
+     progress = Column(Float)
+     date_logged = Column(Date)
+ 
++
+ Base.metadata.create_all(bind=engine)
+ 
++
+ def get_summary():
+-    ideas = session.query(Idea).all()
+-    df = pd.DataFrame([{"progress": i.progress, "sdg": i.sdg} for i in ideas]) if ideas else pd.DataFrame(columns=["progress","sdg"])
+-    avg = round(df["progress"].mean(),1) if not df.empty else 0
++    ideas = (
++        session.query(Idea)
++        .order_by(Idea.date_logged.desc(), Idea.id.desc())
++        .all()
++    )
++    records = [
++        {
++            "progress": idea.progress,
++            "sdg": idea.sdg,
++            "date": (idea.date_logged or date.today()).isoformat(),
++        }
++        for idea in ideas
++    ]
++    df = (
++        pd.DataFrame(records, columns=["progress", "sdg", "date"])
++        if records
++        else pd.DataFrame(columns=["progress", "sdg", "date"])
++    )
++
++    if df.empty:
++        return ideas, 0, {}, None, 0, 0, []
++
++    avg_progress = round(float(df["progress"].mean()), 1)
+     sdg_count = df["sdg"].value_counts().to_dict()
+-    return ideas, avg, sdg_count
++    top_sdg = max(sdg_count, key=sdg_count.get) if sdg_count else None
++    completion_rate = round(float((df["progress"] >= 75).mean() * 100), 1)
++    momentum = round(
++        float(df["progress"].tail(min(5, len(df))).mean()),
++        1,
++    )
++    timeline = (
++        df.groupby("date").size().reset_index(name="count").to_dict("records")
++    )
++
++    return ideas, avg_progress, sdg_count, top_sdg, completion_rate, momentum, timeline
++
+ 
+ # --- Dashboard ---
+ @app.get("/", response_class=HTMLResponse)
+ def dashboard(request: Request):
+-    ideas, avg, sdg_count = get_summary()
+-    return templates.TemplateResponse("dashboard.html", {"request":request, "ideas":ideas, "avg":avg, "sdg_count":sdg_count})
++    (
++        ideas,
++        avg,
++        sdg_count,
++        top_sdg,
++        completion_rate,
++        momentum,
++        timeline,
++    ) = get_summary()
++    recent_ideas = ideas[:4]
++    return templates.TemplateResponse(
++        "dashboard.html",
++        {
++            "request": request,
++            "ideas": ideas,
++            "avg": avg,
++            "sdg_count": sdg_count,
++            "top_sdg": top_sdg,
++            "completion_rate": completion_rate,
++            "momentum": momentum,
++            "timeline": timeline,
++            "recent_ideas": recent_ideas,
++            "active_page": "dashboard",
++        },
++    )
++
+ 
+ # --- Tracker ---
+ @app.get("/tracker", response_class=HTMLResponse)
+ def tracker(request: Request):
+-    ideas, avg, sdg_count = get_summary()
+-    return templates.TemplateResponse("tracker.html", {"request":request, "ideas":ideas, "avg":avg})
++    (
++        ideas,
++        avg,
++        sdg_count,
++        top_sdg,
++        completion_rate,
++        momentum,
++        timeline,
++    ) = get_summary()
++    return templates.TemplateResponse(
++        "tracker.html",
++        {
++            "request": request,
++            "ideas": ideas,
++            "avg": avg,
++            "sdg_count": sdg_count,
++            "top_sdg": top_sdg,
++            "completion_rate": completion_rate,
++            "momentum": momentum,
++            "timeline": timeline,
++            "active_page": "tracker",
++        },
++    )
++
+ 
+ @app.post("/add", response_class=RedirectResponse)
+ def add(title: str = Form(...), goal: str = Form(...), sdg: str = Form(...)):
+-    new = Idea(title=title, goal=goal, sdg=sdg,
+-               progress=random.randint(30,100), date_logged=date.today())
++    new = Idea(
++        title=title,
++        goal=goal,
++        sdg=sdg,
++        progress=random.randint(30, 100),
++        date_logged=date.today(),
++    )
+     session.add(new)
+     session.commit()
+     return RedirectResponse("/tracker", status_code=303)
+ 
++
+ # --- Culture Lens ---
+ @app.get("/culture", response_class=HTMLResponse)
+ def culture(request: Request):
+-    c = random.choice([
+-        ("Collectivist","Team harmony and shared accountability."),
+-        ("Individualist","Personal ownership and initiative."),
+-        ("High-Context","Meaning via tone and relationships."),
+-        ("Low-Context","Direct, explicit communication.")
+-    ])
+-    return templates.TemplateResponse("culture.html", {"request":request, "culture":c})
++    culture_insight = random.choice(
++        [
++            ("Collectivist", "Team harmony and shared accountability."),
++            ("Individualist", "Personal ownership and initiative."),
++            ("High-Context", "Meaning via tone and relationships."),
++            ("Low-Context", "Direct, explicit communication."),
++        ]
++    )
++    return templates.TemplateResponse(
++        "culture.html",
++        {
++            "request": request,
++            "culture": culture_insight,
++            "active_page": "culture",
++        },
++    )
+diff --git a/app/static/css/style.css b/app/static/css/style.css
+index 6299701d38251ca7e0f39c2903fc09f886b9b5a3..aa1efc64d2e3a3bad66355d53368019505fa79ff 100644
+--- a/app/static/css/style.css
++++ b/app/static/css/style.css
+@@ -1,35 +1,594 @@
+-body{
+-  margin:0;
+-  font-family:'Inter',sans-serif;
+-  background:linear-gradient(120deg,#f4f6f9 0%,#dce3f9 50%,#fce4ec 100%);
+-  color:#222;
+-}
+-.nav{
+-  background:#0057b7;color:white;padding:1rem 2rem;
+-  display:flex;justify-content:space-between;align-items:center;
+-  box-shadow:0 4px 10px rgba(0,0,0,0.1);
+-}
+-.nav a{color:white;text-decoration:none;margin-left:1rem;font-weight:600;}
+-.nav a.active{text-decoration:underline;}
+-.metrics{
+-  display:flex;justify-content:center;gap:1rem;margin:2rem;flex-wrap:wrap;
+-}
+-.card{
+-  background:rgba(255,255,255,0.8);
+-  backdrop-filter:blur(10px);
+-  border-radius:18px;
+-  box-shadow:0 6px 20px rgba(0,0,0,0.15);
+-  padding:1.5rem 2rem;text-align:center;
+-  transition:transform .3s;
+-}
+-.card:hover{transform:translateY(-6px);}
+-.form-section{max-width:500px;margin:2rem auto;text-align:center;}
+-input,select,button{
+-  width:90%;margin:.4rem 0;padding:.6rem;border-radius:10px;
+-  border:1px solid #ccc;font-size:1rem;
+-}
+-button{background:#0057b7;color:white;border:none;font-weight:600;cursor:pointer;}
+-button:hover{background:#0072ff;}
+-table{width:80%;margin:2rem auto;border-collapse:collapse;}
+-th,td{padding:.7rem;border-bottom:1px solid #ccc;text-align:left;}
+-.note{color:#555;font-style:italic;text-align:center;margin-top:1rem;}
++:root {
++  --bg-gradient: radial-gradient(120% 150% at 20% 20%, rgba(91, 141, 239, 0.15), rgba(255, 255, 255, 0));
++  --card-glass: rgba(255, 255, 255, 0.78);
++  --primary: #5B8DEF;
++  --primary-dark: #31447A;
++  --accent: #21C8A9;
++  --text: #1B1E36;
++  --text-muted: #5B6072;
++  --border: rgba(123, 135, 166, 0.2);
++  --shadow: 0 18px 40px rgba(27, 30, 54, 0.12);
++  --radius-lg: 26px;
++  --radius-md: 18px;
++  --radius-sm: 12px;
++}
++
++* {
++  box-sizing: border-box;
++}
++
++body {
++  margin: 0;
++  font-family: 'Inter', sans-serif;
++  color: var(--text);
++  background: linear-gradient(120deg, #f5f7fb 0%, #eef2ff 45%, #f8f5ff 100%);
++  min-height: 100vh;
++  position: relative;
++}
++
++.background-orbs {
++  position: fixed;
++  inset: 0;
++  pointer-events: none;
++  z-index: -1;
++  background: var(--bg-gradient);
++  overflow: hidden;
++}
++
++.orb {
++  position: absolute;
++  border-radius: 50%;
++  filter: blur(0px);
++  opacity: 0.35;
++  animation: float 18s ease-in-out infinite;
++}
++
++.orb-1 {
++  width: 320px;
++  height: 320px;
++  background: rgba(91, 141, 239, 0.45);
++  top: -100px;
++  left: -80px;
++}
++
++.orb-2 {
++  width: 260px;
++  height: 260px;
++  background: rgba(33, 200, 169, 0.4);
++  bottom: 10%;
++  right: 5%;
++  animation-delay: 3s;
++}
++
++.orb-3 {
++  width: 200px;
++  height: 200px;
++  background: rgba(249, 155, 69, 0.35);
++  top: 20%;
++  right: 30%;
++  animation-delay: 6s;
++}
++
++@keyframes float {
++  0%, 100% { transform: translate3d(0, 0, 0); }
++  50% { transform: translate3d(20px, -30px, 0); }
++}
++
++.site-header {
++  position: sticky;
++  top: 0;
++  display: flex;
++  align-items: center;
++  justify-content: space-between;
++  padding: 1.2rem 4vw;
++  backdrop-filter: blur(16px);
++  background: rgba(255, 255, 255, 0.75);
++  border-bottom: 1px solid var(--border);
++  z-index: 10;
++}
++
++.logo-wrap {
++  display: flex;
++  align-items: center;
++  gap: 0.8rem;
++}
++
++.logo-icon {
++  width: 44px;
++  height: 44px;
++  display: grid;
++  place-items: center;
++  font-size: 1.6rem;
++  background: rgba(91, 141, 239, 0.2);
++  border-radius: 14px;
++}
++
++.logo-title {
++  display: block;
++  font-weight: 700;
++  font-size: 1.1rem;
++  letter-spacing: 0.4px;
++}
++
++.logo-subtitle {
++  display: block;
++  font-size: 0.78rem;
++  color: var(--text-muted);
++}
++
++.site-nav {
++  display: flex;
++  gap: 1rem;
++}
++
++.nav-link {
++  font-weight: 600;
++  color: var(--text-muted);
++  text-decoration: none;
++  padding: 0.55rem 1.1rem;
++  border-radius: var(--radius-sm);
++  transition: all 0.3s ease;
++}
++
++.nav-link:hover {
++  color: var(--primary);
++  background: rgba(91, 141, 239, 0.12);
++}
++
++.nav-link.is-active {
++  color: #fff;
++  background: var(--primary);
++  box-shadow: 0 10px 20px rgba(91, 141, 239, 0.3);
++}
++
++.page {
++  width: min(1160px, 92vw);
++  margin: 0 auto;
++  padding: 4rem 0 5rem;
++}
++
++.hero {
++  display: grid;
++  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
++  gap: 2.5rem;
++  align-items: center;
++  margin-bottom: 3.5rem;
++}
++
++.hero__content h1 {
++  font-size: clamp(2rem, 4vw, 2.8rem);
++  line-height: 1.1;
++  margin-bottom: 1rem;
++}
++
++.hero__description {
++  color: var(--text-muted);
++  line-height: 1.6;
++  max-width: 540px;
++}
++
++.eyebrow {
++  text-transform: uppercase;
++  font-size: 0.75rem;
++  letter-spacing: 0.24rem;
++  font-weight: 600;
++  color: var(--primary);
++  margin-bottom: 0.9rem;
++}
++
++.hero__metrics {
++  display: flex;
++  flex-wrap: wrap;
++  gap: 0.9rem;
++  margin-top: 1.8rem;
++}
++
++.metric-pill {
++  background: var(--card-glass);
++  box-shadow: var(--shadow);
++  border-radius: 999px;
++  padding: 0.85rem 1.4rem;
++  display: flex;
++  flex-direction: column;
++  min-width: 160px;
++  border: 1px solid rgba(255, 255, 255, 0.8);
++}
++
++.metric-label {
++  font-size: 0.75rem;
++  letter-spacing: 0.08rem;
++  text-transform: uppercase;
++  color: var(--text-muted);
++}
++
++.metric-value {
++  font-size: 1.65rem;
++  font-weight: 700;
++}
++
++.hero__visual {
++  background: var(--card-glass);
++  border-radius: var(--radius-lg);
++  padding: 1.2rem;
++  box-shadow: var(--shadow);
++  border: 1px solid rgba(255, 255, 255, 0.7);
++}
++
++.hero-chart {
++  height: 220px;
++}
++
++.hero__caption {
++  font-size: 0.8rem;
++  color: var(--text-muted);
++  margin-top: 0.8rem;
++}
++
++.stat-grid {
++  display: grid;
++  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
++  gap: 1.5rem;
++  margin-bottom: 3rem;
++}
++
++.stat-card {
++  background: var(--card-glass);
++  border-radius: var(--radius-md);
++  padding: 1.6rem;
++  box-shadow: var(--shadow);
++  border: 1px solid rgba(255, 255, 255, 0.7);
++  transition: transform 0.35s ease, box-shadow 0.35s ease;
++}
++
++.stat-card:hover {
++  transform: translateY(-6px);
++  box-shadow: 0 26px 45px rgba(27, 30, 54, 0.16);
++}
++
++.stat-card h2 {
++  margin: 0.4rem 0 0.6rem;
++  font-size: 1.1rem;
++}
++
++.stat-card p {
++  margin: 0;
++  color: var(--text-muted);
++  line-height: 1.5;
++}
++
++.stat-icon {
++  font-size: 1.8rem;
++}
++
++.insight-grid {
++  display: grid;
++  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
++  gap: 1.8rem;
++}
++
++.panel {
++  background: var(--card-glass);
++  border-radius: var(--radius-md);
++  padding: 1.5rem;
++  box-shadow: var(--shadow);
++  border: 1px solid rgba(255, 255, 255, 0.7);
++  position: relative;
++}
++
++.panel-header {
++  display: flex;
++  justify-content: space-between;
++  align-items: center;
++  margin-bottom: 1.4rem;
++}
++
++.panel-header h2 {
++  margin: 0;
++  font-size: 1.1rem;
++}
++
++.panel-tag {
++  font-size: 0.7rem;
++  text-transform: uppercase;
++  letter-spacing: 0.18rem;
++  padding: 0.35rem 0.75rem;
++  border-radius: 999px;
++  border: 1px solid rgba(91, 141, 239, 0.2);
++  color: var(--primary-dark);
++  background: rgba(91, 141, 239, 0.12);
++}
++
++.panel-tag.success {
++  color: #16794D;
++  background: rgba(33, 200, 169, 0.15);
++  border-color: rgba(33, 200, 169, 0.3);
++}
++
++.panel-tag.info {
++  color: #C76B1A;
++  background: rgba(249, 155, 69, 0.15);
++  border-color: rgba(249, 155, 69, 0.3);
++}
++
++.panel-tag.neutral {
++  color: var(--text-muted);
++  background: rgba(111, 121, 152, 0.16);
++  border-color: rgba(111, 121, 152, 0.26);
++}
++
++.chart-area {
++  min-height: 260px;
++}
++
++.recent-list {
++  list-style: none;
++  margin: 0;
++  padding: 0;
++  display: grid;
++  gap: 1.1rem;
++}
++
++.recent-title {
++  font-weight: 600;
++}
++
++.recent-meta {
++  display: block;
++  font-size: 0.85rem;
++  color: var(--text-muted);
++  margin-top: 0.3rem;
++}
++
++.progress-track {
++  position: relative;
++  width: 100%;
++  height: 8px;
++  border-radius: 999px;
++  background: rgba(27, 30, 54, 0.08);
++  margin-top: 0.7rem;
++}
++
++.progress-track.small {
++  height: 6px;
++}
++
++.progress-fill {
++  position: absolute;
++  inset: 0;
++  background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
++  border-radius: inherit;
++}
++
++.progress-value {
++  font-size: 0.8rem;
++  font-weight: 600;
++  color: var(--text-muted);
++  margin-left: 0.4rem;
++}
++
++.sdg-list {
++  list-style: none;
++  margin: 0;
++  padding: 0;
++  display: grid;
++  gap: 0.6rem;
++}
++
++.sdg-list li {
++  display: flex;
++  justify-content: space-between;
++  align-items: center;
++  gap: 0.6rem;
++}
++
++.badge {
++  background: rgba(91, 141, 239, 0.16);
++  color: var(--primary-dark);
++  padding: 0.35rem 0.7rem;
++  border-radius: 999px;
++  font-size: 0.82rem;
++  font-weight: 600;
++  display: inline-flex;
++  align-items: center;
++  gap: 0.35rem;
++}
++
++.badge-count {
++  font-weight: 600;
++  color: var(--text-muted);
++}
++
++.empty-state {
++  color: var(--text-muted);
++  font-style: italic;
++  margin: 0;
++}
++
++.page-heading {
++  max-width: 720px;
++  margin-bottom: 2.8rem;
++}
++
++.page-heading h1 {
++  font-size: clamp(2rem, 4vw, 2.6rem);
++  line-height: 1.15;
++  margin-bottom: 1rem;
++}
++
++.page-heading__description {
++  color: var(--text-muted);
++  line-height: 1.6;
++}
++
++.tracker-grid {
++  display: grid;
++  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
++  gap: 2rem;
++  margin-bottom: 2.8rem;
++}
++
++.idea-form {
++  display: grid;
++  gap: 1rem;
++}
++
++.idea-form label {
++  display: grid;
++  gap: 0.35rem;
++  font-weight: 600;
++  font-size: 0.88rem;
++}
++
++.idea-form input,
++.idea-form select {
++  padding: 0.75rem 0.9rem;
++  border-radius: var(--radius-sm);
++  border: 1px solid rgba(27, 30, 54, 0.12);
++  font-size: 0.95rem;
++  background: rgba(255, 255, 255, 0.9);
++  transition: border-color 0.25s ease, box-shadow 0.25s ease;
++}
++
++.idea-form input:focus,
++.idea-form select:focus {
++  outline: none;
++  border-color: var(--primary);
++  box-shadow: 0 0 0 4px rgba(91, 141, 239, 0.2);
++}
++
++.primary-button {
++  justify-self: start;
++  padding: 0.75rem 1.4rem;
++  background: linear-gradient(135deg, var(--primary) 0%, #7C6BFF 100%);
++  color: white;
++  font-weight: 600;
++  border: none;
++  border-radius: 999px;
++  cursor: pointer;
++  transition: transform 0.25s ease, box-shadow 0.25s ease;
++}
++
++.primary-button:hover {
++  transform: translateY(-2px);
++  box-shadow: 0 18px 28px rgba(91, 141, 239, 0.25);
++}
++
++.table-wrapper {
++  overflow-x: auto;
++}
++
++.idea-table {
++  width: 100%;
++  border-collapse: collapse;
++  min-width: 520px;
++}
++
++.idea-table th {
++  text-align: left;
++  font-size: 0.78rem;
++  text-transform: uppercase;
++  letter-spacing: 0.12rem;
++  color: var(--text-muted);
++  padding-bottom: 0.9rem;
++}
++
++.idea-table td {
++  padding: 0.75rem 0;
++  border-top: 1px solid var(--border);
++  vertical-align: top;
++  font-size: 0.95rem;
++}
++
++.table-title {
++  font-weight: 600;
++}
++
++.table-meta {
++  display: block;
++  font-size: 0.8rem;
++  color: var(--text-muted);
++  margin-top: 0.35rem;
++}
++
++.analytics-grid {
++  display: grid;
++  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
++  gap: 1.8rem;
++}
++
++.insight-list {
++  list-style: none;
++  margin: 0;
++  padding: 0;
++  display: grid;
++  gap: 0.8rem;
++}
++
++.insight-list li {
++  display: flex;
++  justify-content: space-between;
++  align-items: baseline;
++}
++
++.insight-label {
++  font-size: 0.9rem;
++  color: var(--text-muted);
++}
++
++.insight-value {
++  font-weight: 700;
++  font-size: 1rem;
++}
++
++.culture-panel {
++  max-width: 640px;
++  margin: 0 auto;
++}
++
++.culture-body {
++  font-size: 1.05rem;
++  line-height: 1.6;
++  color: var(--text-muted);
++}
++
++.note {
++  color: var(--text-muted);
++  font-style: italic;
++  margin-top: 1.1rem;
++}
++
++.site-footer {
++  padding: 2.2rem 4vw;
++  display: flex;
++  flex-direction: column;
++  gap: 0.6rem;
++  color: var(--text-muted);
++  font-size: 0.85rem;
++}
++
++.footer-tagline {
++  font-weight: 600;
++  color: var(--primary-dark);
++}
++
++@media (max-width: 720px) {
++  .site-header {
++    flex-direction: column;
++    gap: 1rem;
++    align-items: flex-start;
++  }
++
++  .site-nav {
++    width: 100%;
++    justify-content: space-between;
++  }
++
++  .metric-pill {
++    min-width: unset;
++    width: calc(50% - 0.45rem);
++  }
++
++  .idea-table {
++    min-width: 100%;
++  }
++}
+diff --git a/app/templates/base.html b/app/templates/base.html
+new file mode 100644
+index 0000000000000000000000000000000000000000..57f604d937bc3c28bdcc8656e8510a0f8aa430ed
+--- /dev/null
++++ b/app/templates/base.html
+@@ -0,0 +1,44 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++  <meta charset="UTF-8">
++  <meta name="viewport" content="width=device-width, initial-scale=1.0">
++  <title>{% block title %}Kaizen Flow{% endblock %}</title>
++  <link rel="preconnect" href="https://fonts.googleapis.com">
++  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
++  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
++  <link rel="stylesheet" href="/static/css/style.css">
++  {% block extra_head %}{% endblock %}
++</head>
++<body>
++  <div class="background-orbs">
++    <span class="orb orb-1"></span>
++    <span class="orb orb-2"></span>
++    <span class="orb orb-3"></span>
++  </div>
++  <header class="site-header">
++    <div class="logo-wrap">
++      <div class="logo-icon">🌍</div>
++      <div>
++        <span class="logo-title">Kaizen Flow</span>
++        <span class="logo-subtitle">Continuous improvement intelligence</span>
++      </div>
++    </div>
++    <nav class="site-nav">
++      <a href="/" class="nav-link {% if active_page == 'dashboard' %}is-active{% endif %}">Dashboard</a>
++      <a href="/tracker" class="nav-link {% if active_page == 'tracker' %}is-active{% endif %}">Tracker</a>
++      <a href="/culture" class="nav-link {% if active_page == 'culture' %}is-active{% endif %}">Culture Lens</a>
++    </nav>
++  </header>
++  <main class="page">
++    {% block content %}{% endblock %}
++  </main>
++  <footer class="site-footer">
++    <div>
++      <strong>Kaizen Flow</strong> &middot; Elevate sustainable impact through everyday improvements.
++    </div>
++    <div class="footer-tagline">Designed for teams who measure what matters.</div>
++  </footer>
++  {% block extra_scripts %}{% endblock %}
++</body>
++</html>
+diff --git a/app/templates/culture.html b/app/templates/culture.html
+index b2ef2bae1103cf0a27be26d56eb17cd65f444a4a..8168a2caa97a2af2a7237c78c7295fe776fc97ed 100644
+--- a/app/templates/culture.html
++++ b/app/templates/culture.html
+@@ -1,24 +1,19 @@
+-<!DOCTYPE html>
+-<html lang="en">
+-<head>
+-<meta charset="UTF-8">
+-<title>Kaizen Flow | Culture Lens</title>
+-<link rel="stylesheet" href="/static/css/style.css">
+-</head>
+-<body>
+-<nav class="nav">
+-  <div class="logo">🌍 Kaizen Flow</div>
+-  <div class="links">
+-    <a href="/">Dashboard</a>
+-    <a href="/tracker">Tracker</a>
+-    <a href="/culture" class="active">Culture Lens</a>
+-  </div>
+-</nav>
++{% extends "base.html" %}
++{% block title %}Culture Lens · Kaizen Flow{% endblock %}
++
++{% block content %}
++<section class="page-heading">
++  <p class="eyebrow">Culture lens</p>
++  <h1>Translate cultural context into smarter improvement rituals.</h1>
++  <p class="page-heading__description">Every organization has a unique rhythm. Use this prompt to spark a conversation on how culture shapes the way you deliver impact.</p>
++</section>
+ 
+-<div class="card culture">
+-  <h2>{{culture[0]}} Culture</h2>
+-  <p>{{culture[1]}}</p>
+-  <p class="note">Reflect 💭  How does this shape improvement?</p>
++<div class="panel culture-panel">
++  <div class="panel-header">
++    <h2>{{ culture[0] }} culture</h2>
++    <span class="panel-tag info">Reflection</span>
++  </div>
++  <p class="culture-body">{{ culture[1] }}</p>
++  <p class="note">Reflect 💭 How does this shape improvement?</p>
+ </div>
+-</body>
+-</html>
++{% endblock %}
+diff --git a/app/templates/dashboard.html b/app/templates/dashboard.html
+index 3c71d2a68af499331508f58c720c0de84490a566..e89f2ea2d376e4a8d18bc9f22c11e37908c98f21 100644
+--- a/app/templates/dashboard.html
++++ b/app/templates/dashboard.html
+@@ -1,32 +1,169 @@
+-<!DOCTYPE html>
+-<html lang="en">
+-<head>
+-<meta charset="UTF-8">
+-<title>Kaizen Flow | Dashboard</title>
+-<link rel="stylesheet" href="/static/css/style.css">
++{% extends "base.html" %}
++{% block title %}Dashboard · Kaizen Flow{% endblock %}
++{% block extra_head %}
+ <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+-</head>
+-<body>
+-<nav class="nav">
+-  <div class="logo">🌍 Kaizen Flow</div>
+-  <div class="links">
+-    <a href="/">Dashboard</a>
+-    <a href="/tracker">Tracker</a>
+-    <a href="/culture">Culture Lens</a>
++{% endblock %}
++
++{% block content %}
++<section class="hero">
++  <div class="hero__content">
++    <p class="eyebrow">Strategic snapshot</p>
++    <h1>See how improvement ideas move the Sustainable Development agenda forward.</h1>
++    <p class="hero__description">Track momentum, celebrate progress, and focus your next experiment with real-time insight into every logged idea.</p>
++    <div class="hero__metrics">
++      <div class="metric-pill">
++        <span class="metric-label">Average progress</span>
++        <span class="metric-value">{{ avg }}%</span>
++      </div>
++      <div class="metric-pill">
++        <span class="metric-label">Ideas logged</span>
++        <span class="metric-value">{{ ideas|length }}</span>
++      </div>
++      <div class="metric-pill">
++        <span class="metric-label">Completion rate</span>
++        <span class="metric-value">{{ completion_rate }}%</span>
++      </div>
++    </div>
++  </div>
++  <div class="hero__visual">
++    <div class="hero-chart" id="momentum-chart"></div>
++    <p class="hero__caption">Momentum score is the rolling average of the latest improvements.</p>
+   </div>
+-</nav>
++</section>
+ 
+-<section class="metrics">
+-  <div class="card"><h2>{{avg}}%</h2><p>Average Progress</p></div>
+-  <div class="card"><h2>{{ideas|length}}</h2><p>Ideas Logged</p></div>
++<section class="stat-grid">
++  <article class="stat-card">
++    <div class="stat-icon">⚡️</div>
++    <h2>Momentum pulse</h2>
++    <p>The last five ideas are averaging <strong>{{ momentum }}%</strong> completion.</p>
++  </article>
++  <article class="stat-card">
++    <div class="stat-icon">🎯</div>
++    <h2>High-impact delivery</h2>
++    <p><strong>{{ completion_rate }}%</strong> of ideas have cleared the 75% completion mark.</p>
++  </article>
++  <article class="stat-card">
++    <div class="stat-icon">🧭</div>
++    <h2>Focus area</h2>
++    <p>{% if top_sdg %}Most momentum is around <strong>{{ top_sdg }}</strong>.{% else %}Log ideas to reveal your leading SDG.{% endif %}</p>
++  </article>
++  <article class="stat-card">
++    <div class="stat-icon">🤝</div>
++    <h2>Collaboration depth</h2>
++    <p>Capture ideas from every discipline to balance your SDG portfolio.</p>
++  </article>
+ </section>
+ 
+-<div id="chart"></div>
++<section class="insight-grid">
++  <div class="panel chart-panel">
++    <div class="panel-header">
++      <h2>Ideas per SDG</h2>
++      <span class="panel-tag">Diversity</span>
++    </div>
++    <div id="sdg-chart" class="chart-area"></div>
++  </div>
++  <div class="panel highlights-panel">
++    <div class="panel-header">
++      <h2>Recent wins</h2>
++      <span class="panel-tag success">Shipped</span>
++    </div>
++    {% if recent_ideas %}
++    <ul class="recent-list">
++      {% for idea in recent_ideas %}
++      <li>
++        <div>
++          <span class="recent-title">{{ idea.title }}</span>
++          <span class="recent-meta">{{ idea.date_logged.strftime('%b %d, %Y') }} · {{ idea.sdg }}</span>
++        </div>
++        <div class="progress-track">
++          <span class="progress-fill" style="width: {{ idea.progress }}%"></span>
++          <span class="progress-value">{{ idea.progress }}%</span>
++        </div>
++      </li>
++      {% endfor %}
++    </ul>
++    {% else %}
++    <p class="empty-state">Log your first idea to kickstart the highlight reel.</p>
++    {% endif %}
++  </div>
++  <div class="panel timeline-panel">
++    <div class="panel-header">
++      <h2>Daily cadence</h2>
++      <span class="panel-tag info">Flow</span>
++    </div>
++    <div id="timeline-chart" class="chart-area"></div>
++  </div>
++  <div class="panel sdg-panel">
++    <div class="panel-header">
++      <h2>SDG mix</h2>
++      <span class="panel-tag neutral">Balance</span>
++    </div>
++    {% if sdg_count %}
++    <ul class="sdg-list">
++      {% for sdg, count in sdg_count.items() %}
++      <li>
++        <span class="badge">{{ sdg }}</span>
++        <span class="badge-count">{{ count }}</span>
++      </li>
++      {% endfor %}
++    </ul>
++    {% else %}
++    <p class="empty-state">No SDG coverage yet. Add ideas to map your impact.</p>
++    {% endif %}
++  </div>
++</section>
++{% endblock %}
++
++{% block extra_scripts %}
+ <script>
+-const sdg={{sdg_count|tojson}};
+-const trace={x:Object.keys(sdg),y:Object.values(sdg),
+- type:"bar",marker:{color:"#0057b7"}};
+-Plotly.newPlot('chart',[trace],{title:"Ideas per SDG",margin:{t:40}});
++  const timelineData = {{ timeline|tojson }};
++  const momentumTrace = {
++    x: timelineData.map(item => item.date),
++    y: timelineData.map(item => item.count),
++    type: 'scatter',
++    mode: 'lines+markers',
++    line: { color: '#5B8DEF', width: 3 },
++    marker: { size: 8 }
++  };
++  const momentumLayout = {
++    height: 220,
++    margin: { t: 20, r: 10, b: 40, l: 40 },
++    xaxis: { title: 'Day', tickfont: { size: 12 } },
++    yaxis: { title: 'Ideas logged', tickfont: { size: 12 }, rangemode: 'tozero' },
++    paper_bgcolor: 'rgba(0,0,0,0)',
++    plot_bgcolor: 'rgba(0,0,0,0)'
++  };
++  Plotly.newPlot('momentum-chart', [momentumTrace], momentumLayout, {displayModeBar: false});
++
++  const sdgCount = {{ sdg_count|tojson }};
++  const sdgTrace = {
++    x: Object.keys(sdgCount),
++    y: Object.values(sdgCount),
++    type: 'bar',
++    marker: { color: '#21C8A9', radius: 6 }
++  };
++  const sdgLayout = {
++    height: 320,
++    margin: { t: 10, r: 10, b: 80, l: 40 },
++    paper_bgcolor: 'rgba(0,0,0,0)',
++    plot_bgcolor: 'rgba(0,0,0,0)',
++    xaxis: { tickangle: -30 }
++  };
++  Plotly.newPlot('sdg-chart', [sdgTrace], sdgLayout, {displayModeBar: false});
++
++  const timelineTrace = {
++    x: timelineData.map(item => item.date),
++    y: timelineData.map(item => item.count),
++    type: 'bar',
++    marker: { color: '#F99B45' }
++  };
++  const timelineLayout = {
++    height: 260,
++    margin: { t: 10, r: 10, b: 60, l: 40 },
++    paper_bgcolor: 'rgba(0,0,0,0)',
++    plot_bgcolor: 'rgba(0,0,0,0)',
++    xaxis: { tickangle: -30 }
++  };
++  Plotly.newPlot('timeline-chart', [timelineTrace], timelineLayout, {displayModeBar: false});
+ </script>
+-</body>
+-</html>
++{% endblock %}
+diff --git a/app/templates/tracker.html b/app/templates/tracker.html
+index b96a2e07102e1bd9a0bacdd0e6a9941a1d24261d..5c40791bcc24b8a79518c67c9b3c2443bf4dd1fc 100644
+--- a/app/templates/tracker.html
++++ b/app/templates/tracker.html
+@@ -1,59 +1,148 @@
+-<!DOCTYPE html>
+-<html lang="en">
+-<head>
+-<meta charset="UTF-8">
+-<title>Kaizen Flow | Tracker</title>
+-<link rel="stylesheet" href="/static/css/style.css">
++{% extends "base.html" %}
++{% block title %}Improvement Tracker · Kaizen Flow{% endblock %}
++{% block extra_head %}
+ <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+-</head>
+-<body>
+-<nav class="nav">
+-  <div class="logo">🌍 Kaizen Flow</div>
+-  <div class="links">
+-    <a href="/">Dashboard</a>
+-    <a href="/tracker" class="active">Tracker</a>
+-    <a href="/culture">Culture Lens</a>
+-  </div>
+-</nav>
++{% endblock %}
+ 
+-<section class="form-section">
+-  <h2>Add New Idea</h2>
+-  <form method="post" action="/add">
+-    <input name="title" placeholder="Idea Title" required>
+-    <input name="goal" placeholder="Linked Goal" required>
+-    <select name="sdg">
+-      <option>3 Good Health</option>
+-      <option>4 Quality Education</option>
+-      <option>5 Gender Equality</option>
+-      <option>13 Climate Action</option>
+-      <option>17 Partnerships</option>
+-    </select>
+-    <button>Save 💡</button>
+-  </form>
++{% block content %}
++<section class="page-heading">
++  <p class="eyebrow">Operational cockpit</p>
++  <h1>Log new ideas and keep a pulse on delivery confidence.</h1>
++  <p class="page-heading__description">Empower teams to capture micro-improvements, link them to strategic goals, and watch progress accelerate across your portfolio.</p>
+ </section>
+ 
+-<section class="ideas">
+-  <h2>Logged Ideas</h2>
+-  {% if ideas %}
+-  <table>
+-    <tr><th>Title</th><th>Goal</th><th>SDG</th><th>Progress</th></tr>
+-    {% for i in ideas %}
+-    <tr><td>{{i.title}}</td><td>{{i.goal}}</td><td>{{i.sdg}}</td><td>{{i.progress}}%</td></tr>
+-    {% endfor %}
+-  </table>
+-  {% else %}
+-  <p>No ideas logged yet.</p>
+-  {% endif %}
++<section class="tracker-grid">
++  <div class="panel form-panel">
++    <div class="panel-header">
++      <h2>Log a micro-improvement</h2>
++      <span class="panel-tag">Create</span>
++    </div>
++    <form method="post" action="/add" class="idea-form">
++      <label>
++        <span>Idea title</span>
++        <input name="title" placeholder="e.g. Streamline onboarding support" required>
++      </label>
++      <label>
++        <span>Linked goal</span>
++        <input name="goal" placeholder="e.g. Reduce onboarding time by 30%" required>
++      </label>
++      <label>
++        <span>SDG focus</span>
++        <select name="sdg">
++          <option>3 Good Health</option>
++          <option>4 Quality Education</option>
++          <option>5 Gender Equality</option>
++          <option>13 Climate Action</option>
++          <option>17 Partnerships</option>
++        </select>
++      </label>
++      <button type="submit" class="primary-button">Save idea 💡</button>
++    </form>
++  </div>
++  <div class="panel table-panel">
++    <div class="panel-header">
++      <h2>Idea backlog</h2>
++      <span class="panel-tag info">Progress</span>
++    </div>
++    {% if ideas %}
++    <div class="table-wrapper">
++      <table class="idea-table">
++        <thead>
++          <tr>
++            <th>Idea</th>
++            <th>Goal link</th>
++            <th>SDG</th>
++            <th>Progress</th>
++          </tr>
++        </thead>
++        <tbody>
++          {% for idea in ideas %}
++          <tr>
++            <td>
++              <span class="table-title">{{ idea.title }}</span>
++              <span class="table-meta">Logged {{ idea.date_logged.strftime('%b %d, %Y') }}</span>
++            </td>
++            <td>{{ idea.goal }}</td>
++            <td><span class="badge">{{ idea.sdg }}</span></td>
++            <td>
++              <div class="progress-track small">
++                <span class="progress-fill" style="width: {{ idea.progress }}%"></span>
++              </div>
++              <span class="progress-value">{{ idea.progress }}%</span>
++            </td>
++          </tr>
++          {% endfor %}
++        </tbody>
++      </table>
++    </div>
++    {% else %}
++    <p class="empty-state">No ideas yet. Capture the first improvement to populate this board.</p>
++    {% endif %}
++  </div>
++</section>
++
++<section class="analytics-grid">
++  <div class="panel chart-panel">
++    <div class="panel-header">
++      <h2>Progress trend</h2>
++      <span class="panel-tag success">Velocity</span>
++    </div>
++    <div id="progress-chart" class="chart-area"></div>
++  </div>
++  <div class="panel insights-panel">
++    <div class="panel-header">
++      <h2>Delivery insights</h2>
++      <span class="panel-tag neutral">Summary</span>
++    </div>
++    <ul class="insight-list">
++      <li>
++        <span class="insight-label">Average progress</span>
++        <span class="insight-value">{{ avg }}%</span>
++      </li>
++      <li>
++        <span class="insight-label">Ideas logged</span>
++        <span class="insight-value">{{ ideas|length }}</span>
++      </li>
++      <li>
++        <span class="insight-label">Leading SDG</span>
++        <span class="insight-value">{% if top_sdg %}{{ top_sdg }}{% else %}—{% endif %}</span>
++      </li>
++      <li>
++        <span class="insight-label">Momentum score</span>
++        <span class="insight-value">{{ momentum }}%</span>
++      </li>
++    </ul>
++  </div>
+ </section>
++{% endblock %}
+ 
+-<div id="chart"></div>
++{% block extra_scripts %}
+ <script>
+-const data={{ideas|map(attribute='progress')|list|tojson}};
+-if(data.length>0){
+-  const options={chart:{type:"line",height:250},series:[{name:"Progress",data:data}],
+-  colors:["#0072ff"],stroke:{width:3}};
+-  new ApexCharts(document.querySelector("#chart"),options).render();
+-}
++  const progressSeries = {{ ideas|map(attribute='progress')|list|tojson }};
++  if(progressSeries.length){
++    const options = {
++      chart: { type: 'area', height: 300, toolbar: { show: false } },
++      series: [{ name: 'Progress', data: progressSeries }],
++      colors: ['#5B8DEF'],
++      dataLabels: { enabled: false },
++      stroke: { curve: 'smooth', width: 3 },
++      fill: {
++        type: 'gradient',
++        gradient: {
++          shadeIntensity: 0.6,
++          opacityFrom: 0.8,
++          opacityTo: 0.1,
++          stops: [0, 90, 100]
++        }
++      },
++      grid: { borderColor: 'rgba(255,255,255,0.2)' },
++      xaxis: { labels: { show: false } },
++      yaxis: { min: 0, max: 100, tickAmount: 4 }
++    };
++    const chart = new ApexCharts(document.querySelector('#progress-chart'), options);
++    chart.render();
++  } else {
++    document.querySelector('#progress-chart').innerHTML = '<p class="empty-state">Log an idea to generate the progress trend.</p>';
++  }
+ </script>
+-</body>
+-</html>
++{% endblock %}
+ 
+EOF
+)
