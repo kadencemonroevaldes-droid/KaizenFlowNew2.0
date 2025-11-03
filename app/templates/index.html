@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Kaizen Flow Dashboard</title>
+<link rel="stylesheet" href="/static/css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+</head>
+<body>
+<nav class="nav"><h1>🌍 Kaizen Flow Platform</h1></nav>
+
+<section class="metrics">
+  <div class="card"><h2>{{avg}}%</h2><p>Average Progress</p></div>
+  <div class="card"><h2>{{ideas|length}}</h2><p>Ideas Logged</p></div>
+</section>
+
+<section class="form-section">
+  <h2>Add New Idea</h2>
+  <form method="post" action="/add">
+    <input name="title" placeholder="Idea Title" required>
+    <input name="goal" placeholder="Linked Goal" required>
+    <select name="sdg">
+      <option>3 Good Health</option>
+      <option>4 Quality Education</option>
+      <option>5 Gender Equality</option>
+      <option>13 Climate Action</option>
+      <option>17 Partnerships</option>
+    </select>
+    <button type="submit">Save 💡</button>
+  </form>
+</section>
+
+<section class="ideas">
+  <h2>Logged Ideas</h2>
+  {% if ideas %}
+  <table>
+    <tr><th>Title</th><th>Goal</th><th>SDG</th><th>Progress</th></tr>
+    {% for i in ideas %}
+      <tr><td>{{i.title}}</td><td>{{i.goal}}</td><td>{{i.sdg}}</td><td>{{i.progress}}%</td></tr>
+    {% endfor %}
+  </table>
+  {% else %}
+  <p>No ideas logged yet.</p>
+  {% endif %}
+</section>
+
+<section class="chart">
+  <h2>📈 Progress Trend</h2>
+  <div id="chart"></div>
+</section>
+
+<script>
+const data = {{ideas|map(attribute='progress')|list|tojson}};
+if(data.length>0){
+  const options={chart:{type:"area",height:250},series:[{name:"Progress",data:data}],
+  colors:["#0057b7"],fill:{gradient:{enabled:true,shadeIntensity:.4,opacityFrom:.7,opacityTo:.2}}};
+  new ApexCharts(document.querySelector("#chart"),options).render();
+}
+</script>
+</body>
+</html>

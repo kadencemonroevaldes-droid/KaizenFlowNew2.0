@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Kaizen Flow | Dashboard</title>
+<link rel="stylesheet" href="/static/css/style.css">
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+<nav class="nav">
+  <div class="logo">🌍 Kaizen Flow</div>
+  <div class="links">
+    <a href="/">Dashboard</a>
+    <a href="/tracker">Tracker</a>
+    <a href="/culture">Culture Lens</a>
+  </div>
+</nav>
+
+<section class="metrics">
+  <div class="card"><h2>{{avg}}%</h2><p>Average Progress</p></div>
+  <div class="card"><h2>{{ideas|length}}</h2><p>Ideas Logged</p></div>
+</section>
+
+<div id="chart"></div>
+<script>
+const sdg={{sdg_count|tojson}};
+const trace={x:Object.keys(sdg),y:Object.values(sdg),
+ type:"bar",marker:{color:"#0057b7"}};
+Plotly.newPlot('chart',[trace],{title:"Ideas per SDG",margin:{t:40}});
+</script>
+</body>
+</html>
