@@ -8,25 +8,143 @@
 </head>
 <body>
 <nav class="nav">
-  <div class="logo">🌍 Kaizen Flow</div>
-  <div class="links">
-    <a href="/">Dashboard</a>
-    <a href="/tracker">Tracker</a>
-    <a href="/culture">Culture Lens</a>
+  <div class="nav__inner">
+    <div class="logo">🌍 Kaizen Flow</div>
+    <div class="links">
+      <a href="/" class="active">Dashboard</a>
+      <a href="/tracker">Tracker</a>
+      <a href="/culture">Culture Lens</a>
+    </div>
   </div>
 </nav>
 
-<section class="metrics">
-  <div class="card"><h2>{{avg}}%</h2><p>Average Progress</p></div>
-  <div class="card"><h2>{{ideas|length}}</h2><p>Ideas Logged</p></div>
-</section>
+<main>
+  <section class="hero">
+    <div class="container hero__content">
+      <span class="tag">Continuous Improvement Intelligence</span>
+      <h1>Track the pulse of every idea, from spark to sustainable impact.</h1>
+      <p>Monitor how your teams move ideas forward, understand where Sustainable Development Goals are gaining traction, and celebrate the wins that compound into transformative change.</p>
+      <div class="hero__actions">
+        <a href="/tracker" class="btn primary">Log a New Idea</a>
+        <a href="#insights" class="btn ghost">View Live Insights</a>
+      </div>
+      <div class="hero__meta">
+        <div class="hero__stat">
+          <span>Average Progress</span>
+          <strong>{{ avg }}%</strong>
+        </div>
+        <div class="hero__stat">
+          <span>Ideas Logged</span>
+          <strong>{{ ideas|length }}</strong>
+        </div>
+        <div class="hero__stat">
+          <span>Active SDG Streams</span>
+          <strong>{{ sdg_count|length }}</strong>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<div id="chart"></div>
+  <section class="container">
+    <div class="metric-grid">
+      <div class="card">
+        <h2>{{ avg }}%</h2>
+        <p>Mean progress across every initiative</p>
+      </div>
+      <div class="card">
+        <h2>{{ ideas|length }}</h2>
+        <p>Total experiments recorded</p>
+      </div>
+      <div class="card">
+        <h2>{{ sdg_count|length }}</h2>
+        <p>Distinct SDG priorities activated</p>
+      </div>
+    </div>
+
+    <div id="insights" class="panel-grid">
+      <div class="panel highlight">
+        <div>
+          <h3>Improvement Radar</h3>
+          <small>Distribution of ideas by Sustainable Development Goal focus.</small>
+        </div>
+        <div id="chart"></div>
+      </div>
+      <div class="panel">
+        <div>
+          <h3>Recent Momentum</h3>
+          <small>Latest ideas showing traction and outcomes.</small>
+        </div>
+        <ul class="timeline">
+          {% if ideas %}
+            {% for item in (ideas | sort(attribute='date_logged', reverse=true))[:4] %}
+              <li>
+                <time>{{ item.date_logged.strftime('%b %d, %Y') }}</time>
+                <strong>{{ item.title }}</strong>
+                <span>{{ item.goal }}</span>
+                <span class="badge {% if item.progress > 74 %}success{% elif item.progress < 50 %}warning{% endif %}">{{ item.progress }}% complete</span>
+              </li>
+            {% endfor %}
+          {% else %}
+            <li>
+              <strong>No activity yet</strong>
+              <span>When ideas are added they will appear here with live progress.</span>
+            </li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+
+    <section class="impact-section">
+      <h2>Impact Lens</h2>
+      <p>Connect the dots between your teams’ ideas and the Sustainable Development Goals they reinforce. Spot over-served and under-served priorities to rebalance your portfolio.</p>
+      <div class="sdg-grid">
+        {% set sdgs = [
+          ('3 Good Health', 'Champion healthy lives and wellbeing for all at all ages.'),
+          ('4 Quality Education', 'Advance equitable quality education and lifelong learning.'),
+          ('5 Gender Equality', 'Empower women, girls, and underrepresented communities.'),
+          ('13 Climate Action', 'Accelerate resilience and urgent action against climate change.'),
+          ('17 Partnerships', 'Strengthen partnerships for cross-sector innovation and growth.')
+        ] %}
+        {% for sdg, description in sdgs %}
+          <div class="sdg-card">
+            <span class="sdg-badge">SDG {{ sdg.split(' ')[0] }}</span>
+            <h3>{{ sdg }}</h3>
+            <p>{{ description }}</p>
+            <span class="sdg-count">{{ sdg_count.get(sdg, 0) }} idea{{ 's' if sdg_count.get(sdg, 0) != 1 else '' }}</span>
+          </div>
+        {% endfor %}
+      </div>
+    </section>
+  </section>
+</main>
+
+<footer>
+  Built for continuous improvement teams who believe small steps create outsized impact.
+</footer>
+
 <script>
-const sdg={{sdg_count|tojson}};
-const trace={x:Object.keys(sdg),y:Object.values(sdg),
- type:"bar",marker:{color:"#0057b7"}};
-Plotly.newPlot('chart',[trace],{title:"Ideas per SDG",margin:{t:40}});
+const sdg = {{ sdg_count|tojson }};
+const categories = Object.keys(sdg);
+const values = Object.values(sdg);
+if (categories.length) {
+  Plotly.newPlot('chart', [{
+    x: categories,
+    y: values,
+    type: 'bar',
+    marker: {color: '#2563eb', line: {color: '#1e3a8a', width: 1}},
+    hovertemplate: '%{x}: %{y} idea(s)<extra></extra>'
+  }], {
+    margin: {t: 32, l: 40, r: 12, b: 60},
+    paper_bgcolor: 'rgba(0,0,0,0)',
+    plot_bgcolor: 'rgba(0,0,0,0)',
+    font: {family: 'Inter, sans-serif', color: '#0f172a'},
+    xaxis: {title: '', tickangle: -12, gridcolor: 'rgba(148, 163, 184, 0.2)'},
+    yaxis: {title: 'Ideas', zeroline: false, gridcolor: 'rgba(148, 163, 184, 0.2)'},
+    responsive: true
+  });
+} else {
+  document.getElementById('chart').innerHTML = '<div class="empty-state">Add your first idea to see SDG distribution insights.</div>';
+}
 </script>
 </body>
 </html>

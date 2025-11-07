@@ -7,18 +7,30 @@
 </head>
 <body>
 <nav class="nav">
-  <div class="logo">🌍 Kaizen Flow</div>
-  <div class="links">
-    <a href="/">Dashboard</a>
-    <a href="/tracker">Tracker</a>
-    <a href="/culture" class="active">Culture Lens</a>
+  <div class="nav__inner">
+    <div class="logo">🌍 Kaizen Flow</div>
+    <div class="links">
+      <a href="/">Dashboard</a>
+      <a href="/tracker">Tracker</a>
+      <a href="/culture" class="active">Culture Lens</a>
+    </div>
   </div>
 </nav>
 
-<div class="card culture">
-  <h2>{{culture[0]}} Culture</h2>
-  <p>{{culture[1]}}</p>
-  <p class="note">Reflect 💭  How does this shape improvement?</p>
-</div>
+<main>
+  <section class="container">
+    <div class="culture-card">
+      <span class="tag">Culture cue of the moment</span>
+      <h2>{{ culture[0] }} Culture</h2>
+      <p>{{ culture[1] }}</p>
+      <p class="note">Take 90 seconds to reflect: how does this shape the way ideas are surfaced, evaluated, and celebrated across your team?</p>
+      <a class="btn ghost" href="/culture">Shuffle insight ↻</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  Culture drives cadence. Lean into the patterns that unlock progress.
+</footer>
 </body>
 </html>
